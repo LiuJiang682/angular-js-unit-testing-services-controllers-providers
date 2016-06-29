@@ -41,4 +41,12 @@ describe('service tests', function(){
     });
     expect(mockWindow.alert).not.toHaveBeenCalled();
   });
+
+  it('should show alert with default message when message and title is not passed into showDialog', function(){
+    sampleSvcObj.showDialog();
+
+    expect(mockWindow.alert).toHaveBeenCalled();
+    expect(mockWindow.alert).toHaveBeenCalledWith("You are an idiot");
+    expect(mockModalSvc.showModalDialog).not.toHaveBeenCalled();
+  });
 });

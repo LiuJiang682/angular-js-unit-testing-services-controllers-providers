@@ -6,8 +6,12 @@ angular.module('services', [])
           title: title,
           message: message
         });
-      } else {
+      } 
+      else if (message) {
         $window.alert(message);
+      }
+      else {
+        $window.alert("You are an idiot");
       }
     };
   }]);
