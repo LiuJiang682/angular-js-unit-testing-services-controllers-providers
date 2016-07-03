@@ -4,9 +4,9 @@ angular.module('factory', [])
           return (data1 + ':' + data2).toUpperCase();
       };
 
-      console.log($window.localStorage);
-    //   var secret = $window.localStorage.getItem('myApp.secret');
-    var secret = '123';
+      console.log("inside factory " + $window.localStorage);
+       var secret = $window.localStorage.getItem('myApp.secret');
+//    var secret = '123';
       var apiToken = encrypt(clientId, secret);
 
       return apiToken;
